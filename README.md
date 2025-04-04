@@ -23,5 +23,5 @@
 
 <aside style="font-size:20px">
   Os conteúdos do repositório são baseados em estudos da autora e no material disponibilizado pelos cursos "Geração tech" e "sujeito programador"<br>
-  Sugestões e críticas são muito bem vindas! Entre em contato comigo <a href="malito:juliamaria85775@gmail.com">aqui</a>
+  Sugestões e críticas são muito bem vindas! Entre em contato comigo pelo meu email juliamariafreitas07@gmail.com
 </aside>
