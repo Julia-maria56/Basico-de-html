@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conceitos básicos html</title>
+</head>
+<body>
+    <!--=================================================================================================================-->
+    <!-- TÍTULOS (mais que tamanhos, as tags de títulos são importantes por estabelecerem a importância de uma frase ao navegador)-->
+    <h1>Meu primeiro título</h1> <!--Assim, a tag h1 denota uma grande importância para o que se está dentro dela-->
+    <h2>Meu segundo título</h2>
+    <h3>Meu terceiro título</h3>
+    <h4>Meu quarto título</h4>
+    <h5>Meu quinto título</h5>
+    <!--=================================================================================================================-->
+ 
+ 
+    <!--SEPARAÇÕES: para fazer separações, você pode usar a tag <hr> e/ou a tag <br>-->
+    <hr> <!--Delimita uma linha-->
+    <br> <!--"Pula" uma linha. No caso, você não verá nada sendo "pulado", pois é bom ter alguma coisa para se pular (mas já, já faremos o uso do br novamente)-->
+   
+   
+    <!--=================================================================================================================-->
+    <!--Trabalhando com IMAGENS-->
+
+    <!--Caso você tenha uma imagem de uma url, é necessário copiar o endereço da imagem:-->
+    <img src="https://s2-g1.glbimg.com/u4DBiGsqPFIFsSDptecldJoUpPI=/0x0:1920x1080/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2025/O/O/onc7FASYufEOIznsnqCA/ainda-estou-aqui-virada-drama.01-frame-1993.jpeg" alt="atriz Fernanda Torres">
+    <br> <!--Quebrando a linha-->
+    <!--Caso a imagem esteja dentro do seu projeto, também é muito fácil:-->
+    <img width="300" height="300" src="pituco.jpg" alt="foto de cachorro">
+    <!-- O chamado atributo "width" está ali para definir uma largura à imagem e "height", uma altura-->
+    <br> <!--Quebrando a linha-->
+    <!--Caso a imagem esteja dentro de outra pasta, faça assim:-->
+    <img width="300" height="300" src="/assets/images/pituco.jpg" alt="foto de cachorro">
+    <!--=================================================================================================================-->
+   
+   
+    <!--LINKS e âncoras-->
+    <!--Para colocar links externos ao seu projeto, é necessário copiar a URL-->
+    <br>
+    <a href="https://www.google.com.br/?hl=pt-BR" target="_blank">Acesse o google bem aqui</a>
+    <!--target="_blank" garente que o link será aberto em outro guia-->
+    <br>
+    <p>Acesse ao <a href="https://www.google.com.br/?hl=pt-BR">Google</a></p>
+    <br>
+
+    <!--Imagens também podem ser clicáveis-->
+    <a href="https://www.google.com.br/?hl=pt-BR"><img width="300" height="300" src="pituco.jpg"></a>
+
+    <!--Para levar a um email, use o prefixo "malito"-->
+    <a href="malito:juliamaria85775@gmail.com">Meu email</a>
+
+    <!--Para telefone:-->
+    <a href="tel:+87374920">Meu telefone</a>
+
+    <!--Isso carregará a páginada globo dentro do <iframe> com 600px de largura e 400px de altura.-->
+    <iframe src="https://g1.globo.com/" width="600" height="400"></iframe>
+
+
+    <!--=================================================================================================================-->
+
+   
+    <!--LISTAS-->
+    <!--Para fazer listas ordenadas:-->
+    <ol>
+        <li>Acordar</li>
+        <li>Ler</li>
+        <li>Estudar</li>
+    </ol>
+    <!--Nesse caso, a lista contará 3, 4 e 5-->
+    <ol start="3">
+        <li>Banana</li>
+        <li>Pera</li>
+        <li>Maçã</li>
+    </ol>
+
+    <!--Para listas NÃO ordenadas:-->
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JS</li>
+    </ul>
+
+    <nav> <!--O elemento <nav> descreve uma unidade de navegação importante, como um menu, que contém uma série de hiperlinks.-->
+        <ol>
+            <li>Acordar</li>
+            <li>Ler</li>
+            <li>Estudar</li>
+        </ol>
+    </nav>
+    <!--=================================================================================================================-->
+   
+   
+    <!--TABELAS-->
+    <!--
+    <tr>=linhas
+    <th>= cabeçalho da linha
+    <td>=dados
+    -->
+    <table>
+        <caption>Tabela de serviços
+            <tr>
+                <th>Jardinagem</th>
+                <th>Ferragem</th>
+                <th>Encanamento</th>
+            </tr>
+            <tr>
+                <td>150 reais</td>
+                <td>300 reais</td>
+                <td>40 reais</td>
+            </tr>
+        </caption>
+    </table>
+    <!--=================================================================================================================-->
+
+    <!--FORMULÁRIOS-->
+    <form>
+        <label for="email">Seu email</label>
+        <input type="email" id="email" name="email">
+        <br>
+        <label for="pnome">Primeiro nome</label>
+        <input type="text" id="pnome" name="pnome" required minlength="6"> <!--"required" significa que é obrigatório-->
+        <label for="unome">Último nome</label>
+        <input type="text" id="unome" name="unome" required>
+
+        <!--Tipo RADIO-->
+        <p>Como você está se sentindo hoje?</p>
+        <label>
+            <input type="radio" name="nivel" value="mal"> mal
+        </label>
+        <label>
+            <input type="radio" name="nivel" value="medio"> medio
+        </label>
+        <label>
+            <input type="radio" name="nivel" value="bem"> bem
+        </label>
+        <!--Tipo Select para selecionar itens-->
+
+        <label for="escolaridade">
+            <h2>Qual o seu nível de escolaridade?</h2>
+        </label>
+        <select id="escolaridade" required>
+            <option selected disabled value="">Selecione</option>
+            <option>Educação básica</option>
+            <option>Ensino médio</option>
+            <option>Ensino superior</option>
+            <option>Pós graduação</option>
+        </select>
+        <br>
+
+        <!--CHECKBOX-->
+        <label>Quais tecnologias você conhece?</label>
+        <br><br>
+        <input type="checkbox" id="tecnologia1" name="tecnologia1" value="HTML">
+        <label for="tecnologia1">HTML</label>
+
+        <input type="checkbox" id="tecnologia2" name="tecnologia2" value="JS">
+        <label for="tecnologia2">JS</label>
+
+        <input type="checkbox" id="tecnologia3" name="tecnologia3" value="CSS">
+        <label for="tecnologia3">CSS</label>
+
+         <!--Tipo date-->
+         <label for="nascimento">Data de nascimento:</label>
+         <input type="datetime-local" name="nascimento" id="nascimento">
+         <br><br>
+ 
+         <input type="submit" value="Cadastrar">
+    </form>
+
+    <!--=================================================================================================================-->
+
+
+    <!--Estilização de texto em linha-->
+    <p>Lorem <b>ipsum</b> dolor <strong>sit</strong> amet <em>consectetur</em> adipisicing <i>elit</i>. Provident repudiandae ea tempore corrupti? Eveniet cum, adipisci ipsum quae soluta sunt quibusdam itaque alias. Optio consequatur mollitia quo voluptas molestias earum!</p>
+    <!--
+    Apesar de esteticamente parecidas, a tag <b> e <strong> têm uma diferença: <strong> dá mais ênfase à importância do conteúdo entre tag para o navegador
+    O mesmo para <em> e <i>: <em> tem um maior apelo ao navegador
+    -->
+    <pre>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Veniam, non praesentium iste quia mollitia earum fuga minima nisi? Porro 
+            adipisci earum quisquam assumenda. Magni tenetur aperiam veniam quo, mollitia 
+                    tempora.</pre>
+    <!--O <pre> é um elemento interessante pois ele formata o texto do mesmo jeito que ele está colocado na linha do vs code-->
+    <p><mark>Lorem ipsum dolor sit amet consectetur adipisicing elit. </mark><!--<mark> é um "marca texto"-->
+    <del>Ipsam at reprehenderit ipsum nulla explicabo iusto fugiat labore optio,</del><!--<del> passa uma linha sobre a frase-->
+    <u>dolor, omnis nam facere </u> <!--sublinhar-->
+    provident <sup>pariatur</sup> voluptatibus <sub>sed</sub> aut.Animi, qui vero.</p>
+    <!--sup -> sobrescrever-->
+    <!--<sub> -> texto "mais embaixo"-->
+
+    <!--=================================================================================================================-->
+
+
+    <!--VÍDEOS-->
+    <video poster="thumb.png" width="420" height="340" controls loop muted>
+        <source src="natureza.mp4" type="video/mp4">
+    </video>
+    <!--
+    poster=foto de fundo
+    controls=mostra botão de pause, duração do vídeo...
+    loop=loop
+    muted=vídeo fica mutado ao ser iniciado 
+    -->
+    <!--=================================================================================================================-->
+
+    <!--AUDIO-->
+    <audio controls>
+        <source src="curso.mp3" type="audio/mp3">
+        <!--<source src="curso.ogg" type="audio/ogv">-->
+        O navegador não suporta os arquivos de áudio
+    </audio>
+    <br>
+    <br>
+
+    <!--No caso acima, caso o dispositivo não suporte o primeiro áudio, o segundo formato aparecerá.
+    Caso nenhum arquivo seja carregado, aparecerá a mensagem
+    -->
+    <!--=================================================================================================================-->
+    <!--IFRAME-->
+    
+    <iframe src="iframe.html" width="100%" frameboarder="0"></iframe>
+    <br>
+
+    <!--=================================================================================================================-->
+    <!--Uso do STYLE-->
+    <p style="color:purple; font-size:40px; border: 3px solid red;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam impedit, reprehenderit unde illo suscipit eligendi nihil deleniti accusantium alias, atque quisquam cupiditate sed.</p>
+
+    <!--=================================================================================================================-->
+    <!--DETAILS e SUMMARY-->
+    <!--Sabe no notion que tem uma tag em que você coloca um título depois aperta uma setinnha e tem mais coisa em baixo?
+    O mesmo vale para essa tag aqui!
+    -->
+    <details>
+        <summary>Motor 1.6</summary> 
+        <p>Motor rápido</p>
+    </details>
+    <details open> <!--Já começa aberto-->
+        <summary>Conforto</summary>
+        <p>Bom ar condicionado</p>
+    </details>
+    <br><br>
+    <!--=================================================================================================================-->
+    <!--DATALIST-->
+
+    <form>
+        <input list="carros" name="carro"  placeholder="Procurando carro">
+        <datalist id="carros">
+            <option value="Gol1.6"></option>
+            <option value="Fiesta"></option>
+            <option value="BMW 3.6"></option>
+        </datalist>
+    </form>
+    <br><br><br>
+
+    <!--=================================================================================================================-->
+    <!--HTML SEMÂNTICO-->
+
+    <header> <!--Peso semântico para o cabeçalho do site-->
+        <h1>Cabeçalho do meu site</h1>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Contatos</li>
+                <li>Sobre</li>
+            </ul>
+        </nav>
+    </header>
+
+    <div> <!--Caixa em branco-->
+        <article> <!--Representa um conteúdo independente e completo.-->
+            <h2>Seja bem vindo</h2>
+        </article>
+
+        <aside> <!--É usado para notas, dicas, anúncios, links relacionados, etc.-->
+            <h4>Veja também:
+                <ul>
+                    <li>Alimentação gatos</li>
+                </ul>
+            </h4>
+        </aside>
+    </div>
+    
+
+    <footer> <!--Lá em mbaixo do site-->
+        Direitos reservados ao criador do site
+    </footer>
+
+
+</body>
+</html>
